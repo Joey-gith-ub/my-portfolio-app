@@ -1,0 +1,101 @@
+.landingContainer {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.blurWrapper {
+    background: rgba(255, 255, 255, 0.05); /* Dark translucent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    width: 100%;
+}
+
+.blurWrapper:hover {
+    background: rgba(225, 225, 225, 0.08); /* Darker on hover */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+}
+
+.profilePic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #ffffff;
+}
+
+.profileSection h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 0.9em;
+    color: #cccccc;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.introText {
+    font-size: 1.1em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #bbbbbb;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.portfolioButton {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none; /* Ensure no default button border */
+    cursor: pointer;
+}
+
+.portfolioButton:hover {
+    background-color: #eeeeee;
+}
+
+.carrdCredit {
+    font-size: 0.8em;
+    color: #777777;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .landingContainer {
+        padding: 20px;
+    }
+    .profileSection h1 {
+        font-size: 1.8em;
+    }
+    .portfolioButton {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}

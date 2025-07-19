@@ -1,0 +1,28 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--bg-medium-dark); /* A slightly lighter dark for contrast */
+    color: #cccccc;
+    text-align: center;
+    font-size: 0.85em;
+    margin-top: auto; /* Pushes the footer to the bottom of the flex container */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow at the top */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* For pages with light backgrounds, you might want a different footer style */
+.footer.light {
+    background-color: #e0e0e0;
+    color: #555555;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 15px 0;
+    }
+}

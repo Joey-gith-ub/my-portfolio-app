@@ -1,0 +1,57 @@
+/* src/index.css */
+
+/* ... (existing styles, including :root variables and initial body styles) ... */
+
+/* New body classes for theme management */
+body.dark-background-page {
+    background-color: var(--bg-dark); /* Ensure it's the base dark */
+    background-image: url('/bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--primary-text-color); /* White text */
+}
+
+body.light-background-page {
+    background-color: var(--bg-light-grey); /* Ensure it's the base light grey */
+    background-image: none; /* No star background */
+    color: var(--text-dark); /* Dark text */
+}
+
+
+/* Make sure your .page-content can adapt */
+.page-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 60px; /* Space for fixed navbar */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Remove any explicit background-color or color from here that might conflict */
+    /* It should inherit from body now, or rely on page-specific component backgrounds */
+}
+
+/* Ensure the main content area itself doesn't have an opaque background
+   that hides the body background, unless that's intended for a specific page.
+   For HomePage, AboutPage, ProjectsPage, their *component* backgrounds should be light grey.
+*/
+.homePage, .aboutPage, .projectsPage {
+    /* These specific pages use a light background for their content area */
+    background-color: var(--bg-light-grey); /* Set background for the component itself */
+    width: 100%; /* Ensure they fill the content area */
+    min-height: calc(100vh - 60px - var(--footer-height, 60px)); /* Adjust for navbar and footer */
+    /* (You might need to define --footer-height in :root or calculate based on actual footer height) */
+}
+
+/* Ensure text color within pages is correct */
+/* If a page has a light background, its text should be dark */
+.homePage h1, .homePage h2, .homePage p,
+.aboutPage h2, .aboutPage p,
+.projectsPage h2, .projectsPage p {
+    color: var(--text-dark); /* Ensure text is dark on light pages */
+}

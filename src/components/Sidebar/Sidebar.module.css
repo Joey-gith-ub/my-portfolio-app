@@ -1,0 +1,68 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    /* For a glassmorphism effect, add: */
+    /* background: rgba(34, 40, 49, 0.85); */
+    /* backdrop-filter: blur(8px); */
+    box-shadow: 2px 0 16px rgba(0,0,0,0.15);
+    color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+    z-index: 1200;
+    display: flex;
+    flex-direction: column;
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin: 18px 18px 0 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.closeButton:hover {
+    color: #ff6b6b;
+}
+
+.sidebarNav {
+    margin-top: 40px;
+    flex: 1;
+}
+
+.sidebarNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebarNav li {
+    margin: 24px 0;
+}
+
+.sidebarNav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 8px;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebarNav a:hover {
+    background: rgba(255,255,255,0.08);
+    color: #ffb347;
+}

@@ -1,0 +1,75 @@
+/* src/components/SocialIcons/SocialIcons.module.css */
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.socialIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sizes */
+.socialLinks.small .socialIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2em;
+}
+.socialLinks.medium .socialIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+}
+.socialLinks.large .socialIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8em;
+}
+
+/* Variants */
+.socialIcon.dark {
+    background-color: #333333; /* Darker background for social icons */
+    color: #ffffff;
+}
+.socialIcon.dark:hover {
+    background-color: #555555; /* Lighter background on hover */
+}
+
+.socialIcon.color {
+    background-color: transparent; /* Transparent background by default */
+    color: #ffffff; /* Default color for icons */
+}
+.socialIcon.color:hover {
+    opacity: 0.8;
+}
+/* Specific colors for the 'color' variant */
+.socialIcon.color.linkedin { color: #0A66C2; }
+.socialIcon.color.x-twitter { color: #000000; } /* X is black */
+.socialIcon.color.email { color: #D44638; } /* Generic red for email */
+.socialIcon.color.gmail { color: #DB4437; } /* Google Mail red */
+.socialIcon.color.yahoo { color: #410093; } /* Yahoo purple */
+.socialIcon.color.youtube { color: #FF0000; } /* YouTube red */
+.socialIcon.color.tiktok { color: #FE2C55; } /* TikTok red */
+
+/* Adjust specific icons to match the image if they're not quite right */
+.socialIcon.color.x-twitter {
+    background-color: #000000; /* X in the image has a black background */
+    color: #ffffff;
+    border-radius: 5px; /* Adjust border-radius if needed */
+}
+.socialIcon.color.email,
+.socialIcon.color.gmail,
+.socialIcon.color.yahoo {
+    background-color: #D44638; /* Matches the red in the image for email */
+    color: #ffffff;
+    border-radius: 5px; /* Adjust border-radius if needed */
+}
+.socialIcon.color.yahoo {
+    background-color: #410093; /* Matches the purple in the image for yahoo */
+}

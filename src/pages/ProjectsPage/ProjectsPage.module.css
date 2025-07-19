@@ -1,0 +1,46 @@
+/* src/pages/ProjectsPage/ProjectsPage.module.css */
+.projectsPage {
+    background-color: var(--bg-light-grey); /* Light background */
+    color: var(--text-dark); /* Ensure text is dark */
+    padding-top: 80px;
+    min-height: calc(100vh - 60px); /* Adjust for fixed navbar and potential footer */
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--text-dark); /* Explicitly set color */
+}
+
+.description {
+    font-size: 1.1em;
+    color: #666; /* Use a slightly lighter dark for descriptions */
+    margin-bottom: 40px;
+}
+
+.nextBtnContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+
+.nextBtn {
+    background: linear-gradient(90deg, #3949ab 0%, #1976d2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nextBtn:hover {
+    background: linear-gradient(90deg, #1976d2 0%, #3949ab 100%);
+    box-shadow: 0 4px 16px rgba(26,35,126,0.16);
+}

@@ -1,0 +1,184 @@
+/* src/pages/HomePage/HomePage.module.css */
+.homePage {
+    background-color: var(--bg-light-grey); /* Light background as in image */
+        font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: var(--text-dark); /* Dark text */
+    padding-top: 80px; /* Adjust for fixed navbar */
+    justify-content: flex-start; /* Align content to top */
+    min-height: calc(100vh - 60px); /* Adjust min-height for navbar */
+    position: relative; /* Add this if not already present */
+    min-height: 100vh;  /* Ensures full viewport height */
+    /* ...other styles... */
+}
+
+.greeting {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-bottom: 5px;
+    align-self: flex-start; /* Align to left within flex container */
+    margin-left: 20px; /* Indent slightly */
+}
+
+.name {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.tagline {
+    font-size: 1em;
+    color: #666666;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.profilePic {
+    width: 180px; /* Larger profile pic for this page */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.infoIcon {
+    position: absolute; /* Position relative to .homePage (which is relative to parent) */
+    bottom: 20px;
+    left: 20px;
+}
+
+.infoIcon button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #888;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.infoIcon button:hover {
+    background-color: #eee;
+    color: #555;
+}
+
+
+@media (min-width: 768px) {
+    .homePage {
+        padding-top: 100px;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .greeting, .name, .tagline {
+        margin-left: 0; /* Remove indent on larger screens */
+    }
+    .profilePic {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.downloadBtn {
+    display: inline-block;
+    margin: 16px 0;
+    padding: 10px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.downloadBtn:hover {
+    background-color: #0056b3;
+}
+
+.nextBtnContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 32px;
+    z-index: 10;
+}
+
+.nextBtn {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+
+.nextBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Modal overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+/* Modern circular modal profile picture */
+.modalContent {
+    position: relative;
+    background: transparent; /* No background for a modern look */
+    box-shadow: none;        /* Remove shadow */
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalProfilePic {
+    width: 380px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.25); /* Soft shadow for depth */
+    border: none;
+    background: #fff;
+    transition: transform 0.2s;
+}
+
+.modalProfilePic:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.32);
+}
+
+@media (max-width: 500px) {
+    .modalProfilePic {
+        width: 70vw;
+        height: 70vw;
+    }
+}
